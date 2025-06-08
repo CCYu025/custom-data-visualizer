@@ -2,7 +2,7 @@
 # genai_utils.py
 import time
 import os
-from google import genai
+import google.generativeai as genai
 
 # 改為從環境變數中讀取 API Key
 API_KEY = os.getenv("GOOGLE_API_KEY")
