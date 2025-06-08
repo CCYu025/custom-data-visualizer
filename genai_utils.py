@@ -1,11 +1,15 @@
 # 余振中 (Yu Chen Chung)
 # genai_utils.py
 import time
+import os
 from google import genai
 
-# 這裡把 API Key 寫在模組中（開發測試用）。
-# 若要部署，建議改用環境變數：os.getenv("GOOGLE_API_KEY")
-API_KEY = "AIzaSyAUxCNknjAaCUNQQEy766URNhug5V7ofhE"
+# 改為從環境變數中讀取 API Key
+API_KEY = os.getenv("GOOGLE_API_KEY")
+
+# 防止未設金鑰時系統無聲錯誤
+if not API_KEY:
+    raise ValueError("請設定環境變數 GOOGLE_API_KEY 以使用 Gemini API。")
 
 # 在模組載入時，先建立一個 genai.Client 實例
 _client = genai.Client(api_key=API_KEY)
