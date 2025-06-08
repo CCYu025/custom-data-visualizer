@@ -3,5 +3,5 @@ altair
 pandas
 numpy
 openpyxl
-google-generativeai
+google-genai
 requests

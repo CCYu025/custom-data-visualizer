@@ -2,7 +2,7 @@
 # genai_utils.py
 import time
 import os
-import google.generativeai as genai
+from google import genai  # 新 SDK 的正確匯入
 
 # 改為從環境變數中讀取 API Key
 API_KEY = os.getenv("GOOGLE_API_KEY")
@@ -12,7 +12,7 @@ if not API_KEY:
     raise ValueError("請設定環境變數 GOOGLE_API_KEY 以使用 Gemini API。")
 
 # 在模組載入時，先建立一個 genai.Client 實例
-_client = genai.Client(api_key=API_KEY)
+_client = genai.Client()
 
 def ask_gemini(
     prompt_text: str,
