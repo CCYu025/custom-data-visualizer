@@ -7,6 +7,9 @@
 - 標出異常值
 - 用 AI 自動判斷趨勢與建議
 
+
+https://custom-data-visualizer.onrender.com
+系統執行頁面
 ---
 
 ## 🧱 專案名稱：客製化資料視覺化  
